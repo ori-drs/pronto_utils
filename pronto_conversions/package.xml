@@ -12,7 +12,6 @@
   <buildtool_depend>catkin</buildtool_depend>
   <build_depend>roslint</build_depend>
 
-  <depend>pronto_vis</depend>
   <depend>pronto_math</depend>  
 
   <!-- The export tag contains other, unspecified, tags -->

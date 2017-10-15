@@ -8,6 +8,8 @@ endif()
 
 project(pronto_vis)
 
+add_compile_options(-std=c++11)
+
 find_package(catkin REQUIRED COMPONENTS
   pcl_ros
   pronto_math
@@ -31,7 +33,7 @@ include_directories(
 ######################################################
 add_library(${PROJECT_NAME} src/pronto_vis.cpp)
 #configure_file(pronto_vis_config.h.in pronto_vis_config.h)
-add_dependencies(${PROJECT_NAME} ${catkin_EXPORTED_TARGETS} pronto_math)
+add_dependencies(${PROJECT_NAME} ${catkin_EXPORTED_TARGETS})
 target_link_libraries(${PROJECT_NAME} pcl_common)
 pods_use_pkg_config_packages(${PROJECT_NAME} lcmtypes_visualization)
 

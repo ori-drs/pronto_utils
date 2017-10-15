@@ -13,7 +13,6 @@
   <build_depend>roslint</build_depend>
 
   <depend>pcl_ros</depend>
-  <depend>pronto_math</depend>
 
   <!-- The export tag contains other, unspecified, tags -->
   <export />

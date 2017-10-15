@@ -6,6 +6,8 @@ if (NOT COMMAND pods_use_pkg_config_packages)
   include(cmake/pods.cmake)
 endif()
 
+find_package(catkin REQUIRED)
+
 project(bot2_frames_cpp)
 
 catkin_package(

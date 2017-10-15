@@ -8,9 +8,8 @@ endif()
 
 project(pronto_complementary)
 
-#find_package(catkin REQUIRED COMPONENTS
-#  roscpp
-#)
+find_package(catkin
+)
 
 catkin_package(
   INCLUDE_DIRS
