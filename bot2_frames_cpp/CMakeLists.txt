@@ -13,6 +13,7 @@ project(bot2_frames_cpp)
 catkin_package(
   INCLUDE_DIRS
     include
+  LIBRARIES bot2_frames_cpp
 )
 
 ###########

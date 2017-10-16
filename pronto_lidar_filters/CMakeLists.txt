@@ -15,6 +15,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
   INCLUDE_DIRS
     include
+  LIBRARIES pronto_lidar_filters
   CATKIN_DEPENDS pronto_math
 #  DEPENDS system_lib
 )
