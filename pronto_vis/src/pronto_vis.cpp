@@ -1,7 +1,7 @@
 #include <iostream>
 #include <lcm/lcm.h>
 #include "pronto_vis/pronto_vis.hpp"
-#include "lcmtypes/visualization.h"
+#include "lcmtypes/vs.h"
 //#include "visualization/collections.hpp"
 //#include <zlib.h>
 

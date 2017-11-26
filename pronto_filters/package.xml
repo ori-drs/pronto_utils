@@ -15,6 +15,7 @@
 
   <depend>pronto_vis</depend>
   <depend>pronto_math</depend>  
+  <depend>bot_core_lcmtypes</depend>
 
   <!-- The export tag contains other, unspecified, tags -->
   <export />

@@ -9,7 +9,7 @@ endif()
 project(pronto_lcm)
 
 find_package(catkin REQUIRED COMPONENTS
-  pcl_ros
+  pcl_ros bot_core_lcmtypes
 )
 
 catkin_package(
@@ -33,7 +33,7 @@ add_library(${PROJECT_NAME} src/pronto_lcm.cpp)
 #configure_file(pronto_vis_config.h.in pronto_vis_config.h)
 add_dependencies(${PROJECT_NAME} ${catkin_EXPORTED_TARGETS})
 target_link_libraries(${PROJECT_NAME} pcl_common)
-pods_use_pkg_config_packages(${PROJECT_NAME} lcmtypes_visualization)
+pods_use_pkg_config_packages(${PROJECT_NAME} bot2-core)
 
 
 #############

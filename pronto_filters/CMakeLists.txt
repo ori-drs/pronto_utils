@@ -11,6 +11,7 @@ project(pronto_filters)
 find_package(catkin REQUIRED COMPONENTS
   pronto_vis
   pronto_math
+  bot_core_lcmtypes
 )
 
 catkin_package(
