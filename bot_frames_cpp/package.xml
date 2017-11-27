@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package>
-  <name>bot2_frames_cpp</name>
+  <name>bot_frames_cpp</name>
   <version>0.0.0</version>
   <description>Description</description>
   <maintainer email="mfallon@robots.ox.ac.uk">Maurice Fallon</maintainer>
@@ -13,8 +13,12 @@
 
   <build_depend>roslint</build_depend>
   <build_depend>bot_core_lcmtypes</build_depend>
-
+  <build_depend>bot_frames</build_depend>
+  <build_depend>bot_core</build_depend>
+  <run_depend>bot_core</run_depend>
   <run_depend>bot_core_lcmtypes</run_depend>
+  <run_depend>bot_frames</run_depend>
+  <run_depend>eigen</run_depend>
 
   <!-- The export tag contains other, unspecified, tags -->
   <export />
