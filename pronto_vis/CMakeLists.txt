@@ -1,22 +1,19 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(pronto_vis)
 
-if (NOT COMMAND pods_use_pkg_config_packages)
-  include(cmake/pods.cmake)
-endif()
-
 add_compile_options(-std=c++11)
 
 find_package(catkin REQUIRED COMPONENTS
   pcl_ros
   pronto_math
+  vs_lcmtypes
 )
 
 catkin_package(
   INCLUDE_DIRS
     include
   LIBRARIES pronto_vis
-  CATKIN_DEPENDS pcl_ros pronto_math
+  CATKIN_DEPENDS pcl_ros pronto_math vs_lcmtypes
 )
 
 ###########
@@ -30,7 +27,6 @@ include_directories(
 
 ######################################################
 add_library(${PROJECT_NAME} src/pronto_vis.cpp)
-pods_use_pkg_config_packages(${PROJECT_NAME} lcmtypes_visualization)
 
 
 ######################################################

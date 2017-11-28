@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<package format="2">
-  <name>bot2_frames_cpp</name>
+<package>
+  <name>bot_frames_cpp</name>
   <version>0.0.0</version>
   <description>Description</description>
   <maintainer email="mfallon@robots.ox.ac.uk">Maurice Fallon</maintainer>
@@ -9,9 +9,16 @@
   <!--   BSD, MIT, Boost Software License, GPLv2, GPLv3, LGPLv2.1, LGPLv3 -->
   <license>TODO</license>
 
-
   <buildtool_depend>catkin</buildtool_depend>
+
   <build_depend>roslint</build_depend>
+  <build_depend>bot_core_lcmtypes</build_depend>
+  <build_depend>bot_frames</build_depend>
+  <build_depend>bot_core</build_depend>
+  <run_depend>bot_core</run_depend>
+  <run_depend>bot_core_lcmtypes</run_depend>
+  <run_depend>bot_frames</run_depend>
+  <run_depend>eigen</run_depend>
 
   <!-- The export tag contains other, unspecified, tags -->
   <export />

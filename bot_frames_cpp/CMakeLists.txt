@@ -2,18 +2,19 @@ cmake_minimum_required(VERSION 2.8.3)
 # needed for string arrays
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++0x -Wno-deprecated-declarations")
 
-if (NOT COMMAND pods_use_pkg_config_packages)
-  include(cmake/pods.cmake)
-endif()
+project(bot_frames_cpp)
 
-find_package(catkin REQUIRED)
+find_package(catkin REQUIRED COMPONENTS
+  bot_core bot_core_lcmtypes bot_frames)
 
-project(bot2_frames_cpp)
+find_package(Eigen3 REQUIRED)
 
 catkin_package(
   INCLUDE_DIRS
     include
-  LIBRARIES bot2_frames_cpp
+  CATKIN_DEPENDS 
+    bot_frames
+  LIBRARIES bot_frames_cpp
 )
 
 ###########
@@ -23,16 +24,11 @@ catkin_package(
 include_directories(
   include
   ${catkin_INCLUDE_DIRS}
+  ${EIGEN3_INCLUDE_DIRS}
 )
 
 ######################################################
-
 add_library(${PROJECT_NAME} src/bot_frames_cpp.cpp)
-
-#add_dependencies(${PROJECT_NAME}
-#  ${catkin_EXPORTED_TARGETS}
-#)
-pods_use_pkg_config_packages(${PROJECT_NAME} bot2-frames eigen3)
 
 
 #############
