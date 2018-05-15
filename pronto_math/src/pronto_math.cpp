@@ -50,6 +50,7 @@ Eigen::Quaterniond euler_to_quat(double roll, double pitch, double yaw) {
 }
 
 
+// http://eigen.tuxfamily.org/bz/show_bug.cgi?id=1301
 void quat_to_euler(Eigen::Quaterniond q, double& roll, double& pitch, double& yaw) {
   const double q0 = q.w();
   const double q1 = q.x();
