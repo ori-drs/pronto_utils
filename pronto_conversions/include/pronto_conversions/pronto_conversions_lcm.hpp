@@ -31,6 +31,18 @@ static bot_core::pose_t getIsometry3dAsBotPose(Eigen::Isometry3d pose, int64_t u
   return tf;
 }
 
+static bot_core::position_3d_t getIsometry3dAsPosition3d(Eigen::Isometry3d pose){
+  bot_core::position_3d_t tf;
+  tf.translation.x = pose.translation().x();
+  tf.translation.y = pose.translation().y();
+  tf.translation.z = pose.translation().z();
+  Eigen::Quaterniond quat(pose.rotation());
+  tf.rotation.w = quat.w();
+  tf.rotation.x = quat.x();
+  tf.rotation.y = quat.y();
+  tf.rotation.z = quat.z();
+  return tf;
+}
 
 
 // Scale a transform by elapsed time:
