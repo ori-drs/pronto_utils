@@ -3,6 +3,7 @@
 
 #include <pronto_math/pronto_math.hpp>
 #include <lcmtypes/bot_core/pose_t.hpp>
+#include <lcmtypes/bot_core/position_3d_t.hpp>
 
 namespace pronto
 {
