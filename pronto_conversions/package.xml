@@ -13,7 +13,11 @@
   <buildtool_depend>catkin</buildtool_depend>
   <build_depend>roslint</build_depend>
 
-  <depend>pronto_math</depend>  
+  <depend>pronto_math</depend>
+  <depend>pronto_core</depend>
+  <depend>bot_core_lcmtypes</depend>
+  <depend>pronto_lcmtypes</depend>
+  <depend>eigen_utils_lcmtypes</depend>
 
   <!-- The export tag contains other, unspecified, tags -->
   <export />

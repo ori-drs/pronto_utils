@@ -3,6 +3,7 @@
 
 #include <Eigen/Dense>
 #include <Eigen/StdVector>
+#include <pronto_core/rbis.hpp>
 
 
 namespace pronto
@@ -36,6 +37,19 @@ static BotTrans getEigenAsBotTrans(Eigen::Isometry3d transE){
   trans.rot_quat[3] = quat.z();
   return trans;
 }
+}
+namespace eigen_utils {
+static void getBotTransFromRigidBodyState(const RigidBodyState& state,
+                                          BotTrans * bot_trans)
+{
+  Eigen::Vector3d delta_vec = state.position();
+  memcpy(bot_trans->trans_vec, delta_vec.data(), 3 * sizeof(double));
+
+  eigen_utils::quaternionToBotDouble(bot_trans->rot_quat, state.quat);
+}
+
+
+
 
 }
 

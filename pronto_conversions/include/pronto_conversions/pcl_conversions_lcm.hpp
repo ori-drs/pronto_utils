@@ -3,8 +3,7 @@
 
 #include <pcl/point_types.h>
 #include <pcl/io/pcd_io.h>
-
-using namespace std;
+#include <lcmtypes/bot_core/pointcloud2_t.hpp>
 
 namespace pcl
 {
