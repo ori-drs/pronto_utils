@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.8.3)
 # needed for string arrays
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++0x -Wno-deprecated-declarations")
+add_compile_options(-std=c++11)
 
 project(pronto_conversions)
 
