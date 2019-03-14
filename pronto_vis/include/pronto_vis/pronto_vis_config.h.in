@@ -1,6 +1,0 @@
-#ifndef PRONTO_VIS_CONFIG_H_
-#define PRONTO_VIS_CONFIG_H_
-
-#cmakedefine USE_PRONTO_VIS_PCL
-
-#endif // PRONTO_VIS_CONFIG
